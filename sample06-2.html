@@ -7,10 +7,12 @@
   <script>
 function showNasa()
 {
+  var username = document.getElementById('username').value;
+
   twttr.widgets.createTimeline(
       {
         sourceType: "profile",
-        screenName: "nasa"
+        screenName: username
       },
       document.getElementById("nasaSpace")
   );
@@ -18,8 +20,8 @@ function showNasa()
   </script>
 
   <body>
-
-<button type="button" name="NASA" onclick='showNasa()'>NASA</button>
+<input type="text" id="username">
+<button type="button" name="NASA" onclick='showNasa()'>click</button>
 
 <div id='nasaSpace'></div>
 
